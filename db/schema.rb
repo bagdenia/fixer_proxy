@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_135221) do
-
+ActiveRecord::Schema.define(version: 20_201_213_135_221) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "rates", force: :cascade do |t|
-    t.string "base", null: false
-    t.string "other", null: false
-    t.date "date", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["base", "other", "date"], name: "index_rates_on_base_and_other_and_date", unique: true
+  create_table 'rates', force: :cascade do |t|
+    t.string 'base', null: false
+    t.string 'other', null: false
+    t.date 'date', null: false
+    t.decimal 'rate', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index %w[base other date], name: 'index_rates_on_base_and_other_and_date', unique: true
   end
-
 end

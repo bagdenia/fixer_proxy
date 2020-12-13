@@ -4,10 +4,11 @@ class CreateRates < ActiveRecord::Migration[6.1]
       t.string :base, null: false
       t.string :other, null: false
       t.date :date, null: false
+      t.decimal :rate, null: false
 
       t.timestamps
     end
 
-    add_index :rates, [:base, :other, :date], unique: true
+    add_index :rates, %i[base other date], unique: true
   end
 end
