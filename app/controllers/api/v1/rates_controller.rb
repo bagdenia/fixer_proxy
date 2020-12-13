@@ -1,2 +1,6 @@
-class Api::V1::RatesController < ApplicationController
+module Api
+  module V1
+    class RatesController < ApplicationController
+    end
+  end
 end
