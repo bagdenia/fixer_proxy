@@ -11,11 +11,18 @@ Coding exercise for Freska
   ```
 * Add valid access key to .env
 
+* Run with Docker:
+  Execute in terminal in application folder:
+  * docker-compose build
+  * docker-compose up
+
+OR
+
 * Database initialization:
   ```
   rails db:create
   rails db:migrate
   ```
 * Run: rails s
-* Check for instance: http://localhost:3000/api/v1/rates/2020-12-12?base=EUR&other=USD
 
+* Check for instance: http://localhost:3000/api/v1/rates/2020-12-12?base=EUR&other=USD
