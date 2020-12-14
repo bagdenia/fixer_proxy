@@ -1,24 +1,21 @@
 # README
+Coding exercise for Freska
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version tested 2.6.0
 
-Things you may want to cover:
+* Run:
+  ```
+  git clone git@github.com:bagdenia/fixer_proxy.git
+  cd fixer_proxy/
+  bundle
+  ```
+* Add valid access key to .env
 
-* Ruby version
+* Database initialization:
+  ```
+  rails db:create
+  rails db:migrate
+  ```
+* Run: rails s
+* Check for instance: http://localhost:3000/api/v1/rates/2020-12-12?base=EUR&other=USD
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
